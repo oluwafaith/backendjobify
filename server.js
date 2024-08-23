@@ -22,7 +22,6 @@ import helmet from "helmet";
 import xss from "xss-clean";
 import mongoSanitize from "express-mongo-sanitize";
 
-// hello
 // db and authenticateUser
 import connectDB from "./db/connect.js";
 
@@ -41,7 +40,6 @@ if (process.env.NODE_ENV !== "production") {
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 
-// only when ready to deploy
 app.use(express.static(path.resolve(__dirname, "./client/build")));
 
 app.use(express.json());
